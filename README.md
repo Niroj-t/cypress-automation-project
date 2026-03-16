@@ -12,7 +12,6 @@ This project automates making an appointment on the [CURA Healthcare Demo](https
 git clone <your-repo-url>
 cd <your-project-folder>
 npm install
-
 npx cypress open
 npx cypress run
 
