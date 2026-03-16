@@ -16,7 +16,7 @@ npm install
 npx cypress open
 npx cypress run
 
----
+```
 ## Test Flow
 
 1. **Visit CURA Healthcare website**  
