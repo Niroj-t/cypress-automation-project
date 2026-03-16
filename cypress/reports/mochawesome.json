@@ -1,0 +1,102 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-03-16T09:03:24.239Z",
+    "end": "2026-03-16T09:03:34.228Z",
+    "duration": 9989,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2feda142-a388-49ff-84b6-e04ef96b0d07",
+      "title": "",
+      "fullFile": "cypress\\e2e\\cure.cy.js",
+      "file": "cypress\\e2e\\cure.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "18f938a2-1ad8-48f7-8504-f811929c30a9",
+          "title": "CURA Make Appointment Flow",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login, Make and Verify Appointment",
+              "fullTitle": "CURA Make Appointment Flow Login, Make and Verify Appointment",
+              "timedOut": null,
+              "duration": 6809,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Click Make Appointment button\ncy.get('#btn-make-appointment').should('be.visible').click();\n// Login\ncy.get('#txt-username').should('be.visible').type('John Doe');\ncy.get('#txt-password').should('be.visible').type('ThisIsNotAPassword');\ncy.get('#btn-login').should('be.visible').click();\n// Make Appointment\ncy.get('select').should('be.visible').select('Hongkong CURA Healthcare Center');\ncy.get('#chk_hospotal_readmission').click();\ncy.get('#radio_program_medicaid').click();\ncy.get('#txt_visit_date').click().type('30/03/2026');\ncy.get('#txt_comment').click({\n  force: true\n}).type('30/03/2026');\ncy.get('#btn-book-appointment').click();\n// Verify Appointment\ncy.get('h2').should('contain.text', 'Appointment Confirmation');\ncy.get('#comment').should('contain.text', '30/03/2026');",
+              "err": {},
+              "uuid": "8d35636a-8de7-4c91-87b5-bff1e4819011",
+              "parentUUID": "18f938a2-1ad8-48f7-8504-f811929c30a9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8d35636a-8de7-4c91-87b5-bff1e4819011"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6809,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.3.2"
+    }
+  }
+}
